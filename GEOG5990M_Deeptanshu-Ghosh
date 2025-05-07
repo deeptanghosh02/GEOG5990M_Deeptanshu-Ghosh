@@ -1,0 +1,81 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPUIwTfkjywVigVv6bGSomx",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/deeptanghosh02/GEOG5990M_Deeptanshu-Ghosh/blob/main/GEOG5990M_Deeptanshu-Ghosh\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Fyec8EObHg48",
+        "outputId": "a95e4111-1af6-404b-e339-821e2156c05d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Current working directory: /content\n",
+            "Error: File not found at: /content/data/lsoa_boundaries.geojson\n",
+            "Please check the file path and name, and make sure the file exists.\n"
+          ]
+        }
+      ],
+      "source": [
+        "import os\n",
+        "import geopandas as gpd\n",
+        "\n",
+        "# Get the absolute path to the current directory\n",
+        "current_dir = os.getcwd()\n",
+        "print(f\"Current working directory: {current_dir}\")\n",
+        "\n",
+        "# Construct the absolute path to the data file\n",
+        "data_file_path = os.path.join(current_dir, \"data\", \"lsoa_boundaries.geojson\")\n",
+        "\n",
+        "# Verify if the file exists\n",
+        "if os.path.exists(data_file_path):\n",
+        "    print(f\"File found at: {data_file_path}\")\n",
+        "    lsoa = gpd.read_file(data_file_path)\n",
+        "    print(lsoa.head())\n",
+        "else:\n",
+        "    print(f\"Error: File not found at: {data_file_path}\")\n",
+        "    print(\"Please check the file path and name, and make sure the file exists.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# New section"
+      ],
+      "metadata": {
+        "id": "uirXtTwzIVwv"
+      }
+    }
+  ]
+}
