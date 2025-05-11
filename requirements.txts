@@ -1,3 +1,46 @@
+
+### 3. analysis.ipynb Structure
+```python
+# Leeds Health Inequalities Analysis
+# Reproducible Research Notebook
+
+## 1. Environment Setup
+import geopandas as gpd
+import pandas as pd
+import matplotlib.pyplot as plt
+print("All packages loaded successfully")
+
+# Verify data paths
+import os
+assert os.path.exists("data/leeds_boundary.geojson"), "Boundary file missing!"
+
+## 2. Data Loading
+# Load boundaries
+leeds = gpd.read_file("data/leeds_boundary.geojson")
+
+# Load IMD data
+imd = pd.read_csv("data/imd_scores.csv", 
+                 usecols=['LSOA21CD', 'IMD_Score'])
+
+# Load obesity data
+obesity = pd.read_csv("data/obesity_data.csv")
+
+## 3. Data Processing
+# Merge datasets
+merged = (leeds.merge(imd, on='LSOA21CD')
+              .merge(obesity, on='LSOA21CD'))
+
+# Save processed data
+merged.to_file("outputs/processed_data/leeds_health.gpkg", driver='GPKG')
+
+## 4. Analysis & Visualization
+# [Your analysis code here]
+fig, ax = plt.subplots(figsize=(10,6))
+merged.plot(column='IMD_Score', legend=True, ax=ax)
+ax.set_title("Leeds Deprivation Scores")
+plt.savefig("outputs/final_plots/imd_map.png")
+
+
 pip freeze > requirements.txt
 geopandas>=0.10.0
 matplotlib>=3.5.0
