@@ -1,16 +1,20 @@
-# GEOG5990M_Deeptanshu-Ghosh
+# Leeds Health Inequalities Analysis
 
-## Project Description 
-Spatial Data Science Report on Programming for Geographical Information Analysis Assignment 
+## Project Overview
+This project analyzes the relationship between neighborhood deprivation (IMD scores) and obesity prevalence in Leeds, UK, using open spatial data.
 
-## Data Sources  
-- [Index of Multiple Deprivation 2019](https://www.gov.uk)  
-- [Public Health England Obesity Data](https://fingertips.phe.org.uk)  
+## Data Sources
+1. **Index of Multiple Deprivation (IMD) 2019**: [UK Government](https://www.gov.uk/)
+2. **Public Health England Obesity Data**: [Fingertips API](https://fingertips.phe.org.uk/)
+3. **Leeds Boundaries**: [ONS Geoportal](https://geoportal.statistics.gov.uk/)
 
-## How to Run  
-1. Clone this repository.  
-2. Install dependencies: `pip install -r requirements.txt`.  
-3. Open `project_notebook.ipynb` in Jupyter.  
+## How to Reproduce
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/GEOG5990M_Leeds_Health_Inequalities.git
 
-## License  
-MIT License (see `LICENSE` file).  
+#Install dependencies:
+pip install -r requirements.txt
+
+#Install dependencies:
+   jupyter notebook analysis.ipynb
