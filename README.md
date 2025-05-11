@@ -11,7 +11,7 @@ This project analyzes the relationship between neighborhood deprivation (IMD sco
 ## How to Reproduce
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/GEOG5990M_Leeds_Health_Inequalities.git
+   git clone https://github.com/Deeptanshu-Ghosh/GEOG5990M_Leeds_Health_Inequalities.git
 
 #Install dependencies:
 pip install -r requirements.txt
