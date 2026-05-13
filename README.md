@@ -6,8 +6,9 @@ The aim of this project is to explore the relationship between AirBnB prices per
 # Repository Contents
 GEOG5990M_Final_Project.ipynb - Main Jupyter Notebook containing all code, analysis and markdown.
 
-airbnb_data_bristol.csv- AirBnB listings data for Bristol (2,556 listings, 28 columns). 
-bristol_ahah_index.geojson - AHAH index data at LSOA level for Bristol (263 LSOAs).
+airbnb_data_bristol.csv- AirBnB listings data for Bristol (2,556 listings, 28 columns)
+
+bristol_ahah_index.geojson - AHAH index data at LSOA level for Bristol (263 LSOAs)
 
 # What the Code Does
 The code loads the two datasets and does some initial data cleaning on the two datasets - the Bristol AirBnB listings dataset and the AHAH entry neighbourhood healthiness index dataset. Then it merges those by LSOA to see how much each neighbourhood's average per night price was. It then runs a Spearman's rank correlation to check if higher priced AirBnB regions were associated with healthier neighbourhoods or unhealthier neighbourhoods. Lastly,it produces two visualisations: a bar chart comparing median prices across room types, and a map showing how average AirBnB prices are distributed across Bristol. 
